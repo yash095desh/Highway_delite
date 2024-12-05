@@ -29,7 +29,7 @@ let transporter = nodemailer.createTransport({
     }
 })
 
-// auth apis
+// auth apis 
 app.post("/register",async(req,res)=>{
     const {dateOfBirth,email,name}= req.body;
     try {
@@ -38,7 +38,7 @@ app.post("/register",async(req,res)=>{
         }
         const user = await User.findOne({email})
         if(user){
-            throw new Error("User Already Exist")
+            throw new Error("User Already Exist") 
         }
         const newUser = new User({
             email:email,
