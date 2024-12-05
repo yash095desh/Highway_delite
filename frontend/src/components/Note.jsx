@@ -6,7 +6,7 @@ const Note = ({content,id,fetchNotes}) => {
     const handleDelete = async()=>{
         try{
             const token = localStorage.getItem('jwtToken');
-            const response = await fetch(`http://localhost:3000/deleteNote/${id}`,{
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/deleteNote/${id}`,{
               method:"DELETE",
               headers:{
                 'Authorization': `Bearer ${token}`,

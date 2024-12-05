@@ -38,7 +38,7 @@ app.post("/register",async(req,res)=>{
         }
         const user = await User.findOne({email})
         if(user){
-            throw new Error("User Already Exist") 
+            throw new Error("User Already Exist")
         }
         const newUser = new User({
             email:email,

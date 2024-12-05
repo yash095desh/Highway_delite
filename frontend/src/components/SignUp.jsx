@@ -24,7 +24,7 @@ function SignUp() {
     try {
       setLoading(true)
       const response = await fetch(
-        "http://localhost:3000/register",
+        `${import.meta.env.VITE_API_URL}/register`,
         {
           method: "POST",
           headers: {
@@ -69,7 +69,7 @@ function SignUp() {
     try {
       setIsOtpGenerating(true)
       const response = await fetch(
-        "http://localhost:3000/sendOtpVerificationEmail",
+        `${import.meta.env.VITE_API_URL}/sendOtpVerificationEmail`,
         {
           method: "POST",
           headers: {
@@ -102,7 +102,7 @@ function SignUp() {
     }
     try {
       setIsVerifying(true)
-      const response = await fetch("http://localhost:3000/verifyOtp", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/verifyOtp`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
