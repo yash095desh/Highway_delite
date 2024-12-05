@@ -11,7 +11,7 @@ This project provides a web-based task management application with user authenti
 - **Frontend**: React, Vite
 - **Backend**: Node.js, Express
 - **Database**: MongoDB
-- **Others**: Axios for API calls, JWT for authentication
+- **Others**: Nodemailer for sending otp to mail, JWT for authentication
 
 ## Setup and Installation
 
